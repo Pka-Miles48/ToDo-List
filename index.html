@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dawstin's ToDo List</title>
+    <style>
+        .completed {
+            text-decoration: line-through;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>ToDo List</h1>
+    <input id="todoInput" type="text" placeholder="New task">
+    <button onclick="addTask()">Add</button>
+    <ul id="todoList"></ul>
+
+    <script src="list.js"></script>
 </body>
 </html>
