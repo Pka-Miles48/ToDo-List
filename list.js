@@ -47,3 +47,8 @@ myToDoList.toggleComplete(0);
 
 // Display the tasks again to see the change
 myToDoList.displayToDos();
+
+const addButton = document.getElementById('Add'); // Replace 'add-button' with your actual button ID
+addButton.addEventListener('click', () => {
+    // Your logic for adding a to-do item goes here
+});
