@@ -23,11 +23,19 @@ class ToDoList {
         const ul = document.getElementById("myUL");
         ul.innerHTML = ''; // Clear the list before displaying items
         this.toDoItems.forEach((toDo, index) => {
-            const status = toDo.isComplete ? '✅' : '❌';
             const li = document.createElement("li");
-            li.textContent = `${index + 1}. ${status} ${toDo.text}`;
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.checked = toDo.isComplete;
+            checkbox.onclick = () => this.toggleComplete(index);
+            li.appendChild(checkbox);
+            li.appendChild(document.createTextNode(`${index + 1}. ${toDo.text}`));
             ul.appendChild(li);
         });
+    }
+
+    resetToDos() {
+        this.toDoItems = []; // Clear the ToDo items
     }
 }
 
@@ -62,3 +70,9 @@ function newElement() {
 document.getElementById("addButton").addEventListener("click", function() {
     alert("Add button clicked!");
   });
+
+  function resetInput() {
+    document.getElementById("myInput").value = ""; // Clear the input field
+}
+
+document.getElementById("addButton").addEventListener("click", newElement);
