@@ -58,3 +58,7 @@ function newElement() {
     myToDoList.displayToDos();
     document.getElementById("myInput").value = ""; // Clear the input field
 }
+
+document.getElementById("addButton").addEventListener("click", function() {
+    alert("Add button clicked!");
+  });
