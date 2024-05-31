@@ -20,9 +20,13 @@ class ToDoList {
     }
 
     displayToDos() {
+        const ul = document.getElementById("myUL");
+        ul.innerHTML = ''; // Clear the list before displaying items
         this.toDoItems.forEach((toDo, index) => {
             const status = toDo.isComplete ? '✅' : '❌';
-            console.log(`${index + 1}. ${status} ${toDo.text}`);
+            const li = document.createElement("li");
+            li.textContent = `${index + 1}. ${status} ${toDo.text}`;
+            ul.appendChild(li);
         });
     }
 }
@@ -52,4 +56,5 @@ function newElement() {
     var inputValue = document.getElementById("myInput").value;
     myToDoList.addToDo(inputValue);
     myToDoList.displayToDos();
+    document.getElementById("myInput").value = ""; // Clear the input field
 }
