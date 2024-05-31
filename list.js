@@ -32,6 +32,12 @@ const myToDoList = new ToDoList();
 // Add some tasks
 myToDoList.addToDo('Buy milk');
 myToDoList.addToDo('Walk the dog');
+myToDoList.addToDo('Water the plants');
+myToDoList.addToDo('Fold clothes');
+myToDoList.addToDo('Play ball with friends');
+myToDoList.addToDo('Watch a movie');
+myToDoList.addToDo('Organize gaming system');
+myToDoList.addToDo('Make art');
 
 // Display the tasks
 myToDoList.displayToDos();
